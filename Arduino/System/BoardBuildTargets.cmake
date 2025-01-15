@@ -916,11 +916,11 @@ function(_library_search_process lib search_paths_var search_suffixes_var return
 	endif()
 
 	# Although we got the match, let us search for the required header within the folder
-	file(GLOB_RECURSE lib_header_path "${matched_lib_path}/${lib}.h*")
-	if (NOT lib_header_path)
-		set ("${return_var}" "${lib}-NOTFOUND" PARENT_SCOPE)
-		return()
-	endif()
+        # file(GLOB_RECURSE lib_header_path "${matched_lib_path}/${lib}.h*")
+	# if (NOT lib_header_path)
+	# 	set ("${return_var}" "${lib}-NOTFOUND" PARENT_SCOPE)
+	# 	return()
+	# endif()
 
 	set ("${return_var}" "${matched_lib_path}" PARENT_SCOPE)
 
